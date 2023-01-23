@@ -12,7 +12,7 @@ import {
 import { FiLink } from "react-icons/fi";
 
 const VIDEO_LINK =
-  "https://res.cloudinary.com/dksmk66vo/video/upload/v1674456543/FINAL_RENDER_v2_1_u0bkpf.mp4";
+  "https://res.cloudinary.com/dksmk66vo/video/upload/v1674491001/FINAL_RENDER_v2_1_1_wwfmxf.mp4";
 
 const LOGO_LINK =
   "https://res.cloudinary.com/dksmk66vo/image/upload/v1674462504/KRIYA_gold_1_lfeukx.png";
@@ -29,7 +29,7 @@ const App = () => {
   };
 
   return (
-    <main className="h-screen w-screen oveflow-x-hidden lg:overflow-y-hidden flex flex-col items-center justify-start font-montserrat relative">
+    <main className="lg:h-screen w-screen oveflow-x-hidden lg:overflow-y-hidden flex flex-col items-center justify-start font-montserrat relative">
       <div className="h-[80vh] overflow-hidden bg-black w-screen relative">
         <div className="flex flex-col space-y-8 absolute bottom-8 left-8 z-50">
           <a
@@ -79,34 +79,10 @@ const App = () => {
           <source src={VIDEO_LINK} type="video/mp4" />
         </video>
       </div>
-      <section className="w-screen flex flex-col lg:flex-row justify-center items-center h-[20vh]">
-        <div className="bg-white w-1/2 p-8 h-full  relative">
-          {/* <img
-            src={LOGO_LINK}
-            alt=""
-            className="h-48 w-auto absolute -top-36 left-8 z-30 drop-shadow-xl"
-          /> */}
-          <div className="flex w-full space-x-16 items-center">
-            <p className="text-sm">Presented by</p>
-            <div className="flex items-center space-x-4">
-              <img
-                src="https://res.cloudinary.com/dksmk66vo/image/upload/v1674460965/PSG_College_of_Technology_logo_4_eqv5fb.png"
-                alt=""
-                className="h-16 "
-              />
-              <div className="">
-                <h2 className="font-semibold text-lg uppercase">
-                  STUDENTS UNION
-                </h2>
-                <h1 className="uppercase text-sm">PSG College of Technology</h1>
-                <h1 className="text-xs">Coimbatore</h1>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="flex flex-col lg:flex-row  w-full lg:w-1/2 h-full relative">
+      <footer className="w-screen flex flex-col lg:flex-row justify-center items-center h-full lg:h-[20vh]">
+        <section className="bg-white w-full lg:w-1/2 p-8 h-full flex flex-col lg:flex-row lg:items-center lg:justify-start justify-center relative space-y-4 lg:space-y-0">
           <button
-            className="p-4 bg-gray-700 border-2 border-white text-white shadow-lg top-0 left-[50%] -translate-x-[50%] -translate-y-[50%] rounded-full absolute"
+            className="lg:hidden p-4 bg-gray-700 border-2 border-white text-white shadow-lg top-0 left-[50%] -translate-x-[50%] -translate-y-[50%] rounded-full absolute"
             onClick={handlePlay}
           >
             {isPlaying ? (
@@ -115,20 +91,45 @@ const App = () => {
               <BsFillPlayFill size={32} />
             )}
           </button>
-          <div className="w-1/2 bg-gray-300 p-8 flex flex-col justify-center">
-            <p className="text-gray-700 font-semibold">Date</p>
-            <div className="text-lg text-black tracking-wide">
-              24<sup>th</sup> - 26<sup>th</sup> March, 2023
+          <p className="text-sm mr-16">Presented by</p>
+          <div className="flex items-center">
+            <img
+              src="https://res.cloudinary.com/dksmk66vo/image/upload/v1674460965/PSG_College_of_Technology_logo_4_eqv5fb.png"
+              alt=""
+              className="h-16 w-12 lg:w-auto mr-4"
+            />
+            <div className="">
+              <h2 className="font-semibold text-lg uppercase">
+                STUDENTS UNION
+              </h2>
+              <h1 className="uppercase text-sm">PSG College of Technology</h1>
+              <h1 className="text-xs">Coimbatore</h1>
             </div>
           </div>
-          <div className="w-1/2 bg-gray-500 p-8 flex items-center">
-            <p className="text-white tracking-wider text-xl font-semibold">
-              The Global Clash of <br />
-              <span className="font-normal">Techno Talents.</span>
+        </section>
+        <section className="flex flex-col lg:flex-row  w-full lg:w-1/2 h-full relative">
+          <button
+            className="hidden lg:block p-4 bg-gray-700 border-2 border-white text-white shadow-lg top-0 left-[50%] -translate-x-[50%] -translate-y-[50%] rounded-full absolute"
+            onClick={handlePlay}
+          >
+            {isPlaying ? (
+              <BsFillPauseFill size={32} />
+            ) : (
+              <BsFillPlayFill size={32} />
+            )}
+          </button>
+          <div className="w-full lg:w-1/2 bg-gray-300 p-8 flex flex-col  text-black tracking-wider text-xl font-semibold">
+            <p className="">Date</p>
+            <p className="font-normal text-black tracking-wide">
+              24<sup>th</sup> - 26<sup>th</sup> March, 2023
             </p>
           </div>
-        </div>
-      </section>
+          <div className="w-full lg:w-1/2 bg-gray-500 p-8 flex flex-col  text-white tracking-wider text-xl font-semibold">
+            <p className="">The Global Clash of</p>
+            <p className="font-normal">Techno Talents.</p>
+          </div>
+        </section>
+      </footer>
     </main>
   );
 };
