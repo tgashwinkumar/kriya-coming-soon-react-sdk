@@ -1,15 +1,14 @@
-import { Player } from "video-react";
-import "./styles/tailwind.output.css";
-import "/node_modules/video-react/dist/video-react.css";
-import { useEffect, useState } from "react";
+import React, { useState } from "react";
+
 import {
-  BsFacebook,
   BsFillPlayFill,
   BsInstagram,
-  BsTwitter,
   BsFillPauseFill,
+  BsLinkedin,
 } from "react-icons/bs";
 import { FiLink } from "react-icons/fi";
+
+import "./styles/tailwind.output.css";
 
 const VIDEO_LINK =
   "https://res.cloudinary.com/dksmk66vo/video/upload/v1674491001/FINAL_RENDER_v2_1_1_wwfmxf.mp4";
@@ -44,12 +43,12 @@ const App = () => {
             />
           </a>
           <a
-            href="https://twitter.com/kriya_psgtech"
+            href="https://www.linkedin.com/company/studentsunion-psgtech/"
             className=""
             target="_blank"
             rel="noreferrer"
           >
-            <BsTwitter
+            <BsLinkedin
               size={24}
               className="text-gray-400 hover:text-white transition-all"
             />
@@ -107,7 +106,7 @@ const App = () => {
             </div>
           </div>
         </section>
-        <section className="flex flex-col lg:flex-row  w-full lg:w-1/2 h-full relative">
+        <section className="flex flex-col lg:flex-row items-stretch  w-full lg:w-1/2 h-full relative">
           <button
             className="hidden lg:block p-4 bg-gray-700 border-2 border-white text-white shadow-lg top-0 left-[50%] -translate-x-[50%] -translate-y-[50%] rounded-full absolute"
             onClick={handlePlay}
@@ -118,13 +117,13 @@ const App = () => {
               <BsFillPlayFill size={32} />
             )}
           </button>
-          <div className="w-full lg:w-1/2 bg-gray-300 p-8 flex flex-col  text-black tracking-wider text-xl font-semibold">
+          <div className="w-full lg:w-1/2 bg-gray-300 p-8 flex flex-col justify-center  text-black tracking-wider text-xl font-semibold">
             <p className="">Date</p>
             <p className="font-normal text-black tracking-wide">
               24<sup>th</sup> - 26<sup>th</sup> March, 2023
             </p>
           </div>
-          <div className="w-full lg:w-1/2 bg-gray-500 p-8 flex flex-col  text-white tracking-wider text-xl font-semibold">
+          <div className="w-full lg:w-1/2 bg-gray-500 p-8 flex flex-col justify-center text-white tracking-wider text-xl font-semibold">
             <p className="">The Global Clash of</p>
             <p className="font-normal">Techno Talents.</p>
           </div>
